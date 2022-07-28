@@ -58,7 +58,7 @@ Trademark infringements are often caused by an oversight or ignorance from the o
 Example:
 * (March 2016): Azer Koçulu unpublished over 250 modules (esp. `left-pad`) from npm due to trademark infringement over the name "kik" - breaking tens of thousands of projects that depended on it. [[Blog Post](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/)] [[Azer's version](https://web.archive.org/web/20160330050734/https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c)] [[kik's version](https://medium.com/@mproberts/a-discussion-about-the-breaking-of-the-internet-3d4d2a83aa4d#.ld8o5zqz7)]
 
-__ Potential Solutions __
+__Potential Solutions__
 * Register trademark for the open-source project [drawback: extra cost]
 * Research trademarks periodically [drawback: extra work]
 
@@ -70,7 +70,7 @@ Faulty updates are causes by programming mistakes, integration problems, corrupt
 Example:
 * (April 2020) Forbes Lindesay released version 2.2.0 of the `is-promised` library that didn't adhere to the proper ES module standards causing wide-spread build errors. This release led to bugs in popular build tools used to create new projects, such as Facebook's create-react-app, Google's firebase-tools, Amazon's AWS Serverless CLI, Nuxt.js, AVA, angular-cli, and others. [[Blog Post](https://www.zdnet.com/google-amp/article/another-one-line-npm-package-breaks-the-javascript-ecosystem/)] [[Forbes' Post-mortem](https://javascript.plainenglish.io/is-promise-post-mortem-cab807f18dcc)]
 
-__ Potential Solutions __
+__Potential Solutions__
 * Write more tests / safe-guards [drawback: extra effort]
 * Use Quality-Gates (other people checking usage) [drawback: extra effort]
 * Use Bug bounties [drawback: extra cost]
@@ -83,7 +83,7 @@ Package ownership problems are often caused by hacked password / credentials, an
 Example:
 * (Aug. 2021) During the process of getting packages for a project called `bebop` published in various software repositories, Andrew Sampson found that it was unclaimed except in NPM. After inquiring the NPM registry the ownership of the package `bebop` was auto-transferred to Andrew due to a corrupt contact address of the former owner Zach Kelling. [[Blog Post](https://www.theregister.com/2021/08/10/github_npm_package/)]
 
-__ Potential Solutions __
+__Potential Solutions__
 * Stronger authentification (e.g., 2FA) [drawback: extra effort]
 * Continuous contact confirmation [drawback: extra effort]
 * Always using scopes / usernames [depends on registry]
@@ -94,7 +94,7 @@ Examples:
 * (Aug. 2021): Elasticsearch change its widely used JS client library `elasticsearch` to not work with AWS Elasticsearch and OpenSearch anymore.
   * https://github.com/elastic/elasticsearch-js/issues/1519
 
-__ Potential Solutions __
+__Potential Solutions__
 * ???
 
 ### Security Problems
@@ -116,7 +116,7 @@ from https://en.wikipedia.org/wiki/Npm_(software)#Notable_breakages
 
 
 
-__ Potential Solutions __
+__Potential Solutions__
 * More tests
 * Hack bounties
 
@@ -130,8 +130,10 @@ Examples:
 * (Jan. 2022): Marak Squiress intentionally introduced changes to break the functionality and later deletes his projects `colors.js` and `faker.js` after getting pushed / bullied by corporates. [Original Message](http://web.archive.org/web/20210704022108/https://github.com/Marak/faker.js/issues/1046) [Full Story](https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/)
   * https://hacker-news.news/post/27252066
 
-__ Potential Solutions __
+__Potential Solutions__
 * Better monetization mechanisms
+
+
 
 ## Examples for working Monetization
 * cURL? [Daniel Stenberg](https://daniel.haxx.se/) 
