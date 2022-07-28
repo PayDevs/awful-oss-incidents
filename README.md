@@ -62,14 +62,18 @@ __Potential Solutions__
 * Register trademark for the open-source project [drawback: extra cost]
 * Research trademarks periodically [drawback: extra work]
 
-### Faulty updates
+### Programming mistake
 All software system can have minor or major bugs that prevent their intended use in different scenarios. When a open-source maintainer publishes a faulty project the effect can be felt by many of its users.
 
-Faulty updates are causes by programming mistakes, integration problems, corrupt dependencies, and in general due to no having enough time for testing.
-
+Programming mistakes are causes by oversights, missing tests, integration problems, corrupt dependencies, and in general due to no having enough time for checking the system in production-like environments.
 
 __Examples__
+* (Apr 2014): A programming mistake by a single maintainer of `openSSL` led to a vulnerability (a.k.a. **Heartbleed**) that allowed stealing information and passwords from users.
+  * OpenSSL, received just $2,000 per year in donations which grew to $9,000 after the issue was found. (The global cost for the software industry was [estimated to be as high as $500 million](https://www.eweek.com/security/heartbleed-ssl-flaw-s-true-cost-will-take-time-to-tally/))
+  * [The Heartbleed Vulnerability](https://heartbleed.com/)
 * (April 2020) Forbes Lindesay released version 2.2.0 of the `is-promised` library that didn't adhere to the proper ES module standards causing wide-spread build errors. This release led to bugs in popular build tools used to create new projects, such as Facebook's create-react-app, Google's firebase-tools, Amazon's AWS Serverless CLI, Nuxt.js, AVA, angular-cli, and others. [[Blog Post](https://www.zdnet.com/google-amp/article/another-one-line-npm-package-breaks-the-javascript-ecosystem/)] [[Forbes' Post-mortem](https://javascript.plainenglish.io/is-promise-post-mortem-cab807f18dcc)]
+* (Dec 2021): `log4j` enabled a feature from 2013 by default that allowed loading of malicious code.
+  * [The Log4j Vulnerability](https://www.cisa.gov/uscert/apache-log4j-vulnerability-guidance)
 
 __Potential Solutions__
 * Write more tests / safe-guards [drawback: extra effort]
@@ -81,7 +85,6 @@ The maintainer of a open-source library is often the owner of a package on a reg
 
 Package ownership problems are often caused by hacked password / credentials, an oversight or misunderstanding by the registry operator, or general contact problems.
 
-
 __Examples__
 * (Aug. 2021) During the process of getting packages for a project called `bebop` published in various software repositories, Andrew Sampson found that it was unclaimed except in NPM. After inquiring the NPM registry the ownership of the package `bebop` was auto-transferred to Andrew due to a corrupt contact address of the former owner Zach Kelling. [[Blog Post](https://www.theregister.com/2021/08/10/github_npm_package/)]
 
@@ -90,42 +93,40 @@ __Potential Solutions__
 * Continuous contact confirmation [drawback: extra effort]
 * Always using scopes / usernames [depends on registry]
 
-### Corporate Disputes
-Causes: Business decisions
+### Usage Disputes
+The usage of an open-source project can sometime cause problems when third-parties (e.g. Cloud provider) offer them commercially and/or the maintainer community wants to commercialize and builds a Startup.
+
+Usage disputes are causes by different point of views how an open-source project should be used or commercialized. Even if the positions are legally clear the dispute can affect and impair the users.
 
 __Examples__
-* (Aug. 2021): Elasticsearch change its widely used JS client library `elasticsearch` to not work with AWS Elasticsearch and OpenSearch anymore.
-  * https://github.com/elastic/elasticsearch-js/issues/1519
+* (Aug. 2021): Elasticsearch introduced a breaking change to its widely used JS client library `elasticsearch-js` to not work with AWS Elasticsearch and OpenSearch anymore. [[Github Issue](https://github.com/elastic/elasticsearch-js/issues/1519)]
 
 __Potential Solutions__
-* ???
+* Not being dependent on a Company's library? [drawback: extra effort]
 
 ### Security Problems
+
 Causes: Oversight, No time for tests, Corrupt Dependencies, Hacks
 
 __Examples__
-* (Apr 2014): A programming mistake by a single maintainer of `openSSL` led to a vulnerability (l.k.a. **Heartbleed**) that allowed stealing information and passwords from users.
-  * OpenSSL, received just $2,000 per year in donations which grew to $9,000 after the issue was found. (The global cost for the software industry was [estimated to be as high as $500 million](https://www.eweek.com/security/heartbleed-ssl-flaw-s-true-cost-will-take-time-to-tally/))
-  * [The Heartbleed Vulnerability](https://heartbleed.com/)
-* In September 2018, a small package called `event-stream` was infected / enriched with malicious code that targeted a specific company and could steal passwords for crypto accounts [NPM Incident Report](https://blog.npmjs.org/post/180565383195/details-about-the-event-stream-incident)
-* (Dec 2021): `log4j` enabled a feature from 2013 by default that allowed loading of malicious code.
-  * [The Log4j Vulnerability](https://www.cisa.gov/uscert/apache-log4j-vulnerability-guidance)
+* In September 2018, a small package called `event-stream` was infected with malicious code that targeted a specific company and could steal passwords for crypto accounts [NPM Incident Report](https://blog.npmjs.org/post/180565383195/details-about-the-event-stream-incident)
+  * In November 2018, it was discovered that a malicious package had been added as a dependency to version 3.3.6 of the popular package event-stream. The malicious package, called flatmap-stream, contained an encrypted payload that stole bitcoins from certain applications. npm administrators removed the offending package.[16][17]
 * (Oct. 2021): The NPM account for the `UA-Parser-JS` library was hacked, to infect dependent systems with cryptominers and password-stealing trojans in a supply-chain attack. [Full Story](https://www.bleepingcomputer.com/news/security/popular-npm-library-hijacked-to-install-password-stealers-miners/)
 * (Apr 2022): A flaw in the NPM registry allowed adding maintainers to own projects (a.k.a. "Package Planting") - giving a false sense of credibility / security of potentially harmful packages. [Full Story](https://www.bleepingcomputer.com/news/security/npm-flaw-let-attackers-add-anyone-as-maintainer-to-malicious-packages/)
-
-from https://en.wikipedia.org/wiki/Npm_(software)#Notable_breakages
-* In July 2018, the npm credentials of a maintainer of the popular eslint-scope package were compromised resulting in a malicious release of eslint-scope, version 3.7.2. The malicious code copied the npm credentials of the machine running eslint-scope and uploaded them to the attacker.[15] 
-* In November 2018, it was discovered that a malicious package had been added as a dependency to version 3.3.6 of the popular package event-stream. The malicious package, called flatmap-stream, contained an encrypted payload that stole bitcoins from certain applications. npm administrators removed the offending package.[16][17]
-* In March 2022, developer Brandon Nozaki Miller released a version of the package node-ipc containing malicious code that would delete files from users with Belarusian and Russian IP addresses, in protest of the Russian invasion of Ukraine. Vue.js, which uses node-ipc as a dependency, did not pin its dependencies to a safe version, meaning that some users of Vue.js became affected by the malicious package if the dependency was fetched as the latest package.[20][21] The affected dependency was also briefly present in version 3.1 of Unity Hub; a hotfix was released the same day to remove the issue, however.[22]
-
-
+* In July 2018, the npm credentials of a maintainer of the popular `eslint-scope` package were compromised resulting in a malicious release of eslint-scope, version 3.7.2. The malicious code copied the npm credentials of the machine running eslint-scope and uploaded them to the attacker.[15] 
 
 __Potential Solutions__
-* More tests
-* Hack bounties
+* Write more tests / safe-guards [drawback: extra effort]
+* Use bounties for Hacks [drawback: extra cost]
 
 ### Cyber-Warfare
+
+__Examples__
+* In March 2022, developer Brandon Nozaki Miller released a version of the package node-ipc containing malicious code that would delete files from users with Belarusian and Russian IP addresses, in protest of the Russian invasion of Ukraine. Vue.js, which uses node-ipc as a dependency, did not pin its dependencies to a safe version, meaning that some users of Vue.js became affected by the malicious package if the dependency was fetched as the latest package.[20][21] The affected dependency was also briefly present in version 3.1 of Unity Hub; a hotfix was released the same day to remove the issue, however.[22]
 https://www.vice.com/en/article/dypeek/open-source-sabotage-node-ipc-wipe-russia-belraus-computers
+
+__Potential Solutions__
+* ???
 
 ### Developer Burnout
 Developer Burnout / Infocide / Disgruntled Developers
