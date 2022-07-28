@@ -50,6 +50,8 @@ This ever increasing workload and lack of funding often causes maintainers to ge
 
 > Please Note that we do not take sides and every side has it's own story. We just try to categorize and describe the problems, history, and consequences based on some articles.
 
+
+
 ### Trademark infringements
 A part of an open-source project can sometime cause problems when the name of the project, the logo, or something else used in the project causes an infringement on the Trademark, Figurative Mark, Brand, etc. Furthermore, a trademark might even have been registered after the project was created or in different jurisdictions that have not been checked (e.g., trademarks can be registered in a country (e.g., Italy), a union of countries (e.g., the EU) or internationally).
 
@@ -61,6 +63,8 @@ __Examples__
 __Potential Solutions__
 * Register trademark for the open-source project [drawback: extra cost]
 * Research trademarks periodically [drawback: extra work]
+
+
 
 ### Programming mistake
 All software system can have minor or major bugs that prevent their intended use in different scenarios. When a open-source maintainer publishes a faulty project the effect can be felt by many of its users.
@@ -80,6 +84,8 @@ __Potential Solutions__
 * Use Quality-Gates (other people checking usage) [drawback: extra effort]
 * Use Bug bounties [drawback: extra cost]
 
+
+
 ### Package Ownership Disputes
 The maintainer of a open-source library is often the owner of a package on a registry and is the only one allowed to change, delete, or publish new versions. The account of the owner in the registry is often linked to an email address and can only be transferred by the registry operators. If the ownership of a package is transferred this can lead to incompatible libraries (with the same name) or malicious code deleting data or stealing information.
 
@@ -93,6 +99,8 @@ __Potential Solutions__
 * Continuous contact confirmation [drawback: extra effort]
 * Always using scopes / usernames [depends on registry]
 
+
+
 ### Usage Disputes
 The usage of an open-source project can sometime cause problems when third-parties (e.g. Cloud provider) offer them commercially and/or the maintainer community wants to commercialize and builds a Startup.
 
@@ -103,6 +111,8 @@ __Examples__
 
 __Potential Solutions__
 * Not being dependent on a Company's library? [drawback: extra effort]
+
+
 
 ### Security Problems / Hacked Accounts / Criminal Intentions
 
@@ -121,6 +131,8 @@ __Potential Solutions__
 * Stronger authentification (e.g., 2FA) [drawback: extra effort]
 * Continuous contact confirmation [drawback: extra effort]
 
+
+
 ### Cyber-Warfare
 
 __Examples__
@@ -129,6 +141,8 @@ https://www.vice.com/en/article/dypeek/open-source-sabotage-node-ipc-wipe-russia
 
 __Potential Solutions__
 * ???
+
+
 
 ### Developer Burnout
 Developer Burnout / Infocide / Disgruntled Developers
@@ -147,12 +161,16 @@ __Potential Solutions__
 * cURL? [Daniel Stenberg](https://daniel.haxx.se/) 
   * Story: https://onezero.medium.com/the-internet-relies-on-people-working-for-free-a79104a68bcc
 
+
+
 ## Misc / Aftertoughts
 * maintainer account takeovers [`ua-parser-js`](https://github.com/advisories/GHSA-pjwm-rvh2-c87w)
 
 * GitHubs site-policy [2022](https://github.com/github/site-policy/issues/513) 
 * NPM project reconstruction 
 ... problematic as copyright, brand, and name (handle) is owned by the author/maintainer and assuming the identity of the author is borderline illegal (at least the companies are liable and take warranty that the offered (old) versions are correct)
+
+
 
 ## General Links
 * [Open source developers, who work for free, are discovering they have power (Jan. 2022)](https://techcrunch.com/2022/01/18/open-source-developers-who-work-for-free-are-discovering-they-have-power/)
