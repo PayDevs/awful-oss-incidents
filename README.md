@@ -104,7 +104,7 @@ __Examples__
 __Potential Solutions__
 * Not being dependent on a Company's library? [drawback: extra effort]
 
-### Security Problems
+### Security Problems / Hacked Accounts / Criminal Intentions
 
 Causes: Oversight, No time for tests, Corrupt Dependencies, Hacks
 
@@ -118,6 +118,8 @@ __Examples__
 __Potential Solutions__
 * Write more tests / safe-guards [drawback: extra effort]
 * Use bounties for Hacks [drawback: extra cost]
+* Stronger authentification (e.g., 2FA) [drawback: extra effort]
+* Continuous contact confirmation [drawback: extra effort]
 
 ### Cyber-Warfare
 
