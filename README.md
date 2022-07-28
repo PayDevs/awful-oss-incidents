@@ -51,39 +51,42 @@ This ever increasing workload and lack of funding often causes maintainers to ge
 > Please Note that we do not take sides and every side has it's own story. We just try to categorize and describe the problems, history, and consequences based on some articles.
 
 ### Trademark infringements
-Trademark / Brand infringements
-Causes: Oversight (from both sides), Trademark Trolls
-Examples:
-* (March 2016): Azer Koçulu unpublished over 250 modules (esp. `left-pad`) from npm due to trademark infringement over the name "kik" - breaking tens of thousands of projects that depended on it. [Link](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/)
-  * [The left-pad Incident - original article](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/)
-  * [The left-pad Incident - kik's version](https://medium.com/@mproberts/a-discussion-about-the-breaking-of-the-internet-3d4d2a83aa4d#.ld8o5zqz7)
+A part of an open-source project can sometime cause problems when the name of the project, the logo, or something else used in the project causes an infringement on the Trademark, Figurative Mark, Brand, etc. Furthermore, a trademark might even have been registered after the project was created or in different jurisdictions that have not been checked (e.g., trademarks can be registered in a country (e.g., Italy), a union of countries (e.g., the EU) or internationally).
 
-#### Potential Solutions:
-* Buy Trademarks
-* Initial trademark check
+Trademark infringements are often caused by an oversight or ignorance from the open-source maintainer as well as the trademark owner or by "Trademark Trolls" registering the trademark to harm the project.
+
+Example:
+* (March 2016): Azer Koçulu unpublished over 250 modules (esp. `left-pad`) from npm due to trademark infringement over the name "kik" - breaking tens of thousands of projects that depended on it. [[Blog Post](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/)] [[Azer's version](https://web.archive.org/web/20160330050734/https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c)] [[kik's version](https://medium.com/@mproberts/a-discussion-about-the-breaking-of-the-internet-3d4d2a83aa4d#.ld8o5zqz7)]
+
+__ Potential Solutions __
+* Register trademark for the open-source project [drawback: extra cost]
+* Research trademarks periodically [drawback: extra work]
 
 ### Faulty updates
-Causes: Oversight, No time for tests, Corrupt Dependencies
-Examples:
-* (April 2020) The updated `is-promised` library didn't adhere to the proper ES module standards causing wide-spread build errors. 
-  * April 2020: (Faulty update) Over the weekend, the is-promised library was updated to receive support to work as an ES module -- the standardized module system used by the JavaScript language. However, the is-promise v.2.2.0 release didn't adhere to the proper ES module standards. As soon as the update was out, projects that used is-promise inside their build chain started failing due to the improper ES module support [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]. (https://www.zdnet.com/google-amp/article/another-one-line-npm-package-breaks-the-javascript-ecosystem/)
-  * https://twitter.com/tmpreet
-  * https://github.com/then/is-promise/network/dependents
-* In April 2020, a small package called is-promise resulted in outage in serverless applications and deployments worldwide by virtue of being a dependency of many big and important applications.[18]
+All software system can have minor or major bugs that prevent their intended use in different scenarios. When a open-source maintainer publishes a faulty project the effect can be felt by many of its users.
 
+Faulty updates are causes by programming mistakes, integration problems, corrupt dependencies, and in general due to no having enough time for testing.
 
-#### Potential Solutions:
-* Write more tests
-* Test & Bug bounties
+Example:
+* (April 2020) Forbes Lindesay released version 2.2.0 of the `is-promised` library that didn't adhere to the proper ES module standards causing wide-spread build errors. This release led to bugs in popular build tools used to create new projects, such as Facebook's create-react-app, Google's firebase-tools, Amazon's AWS Serverless CLI, Nuxt.js, AVA, angular-cli, and others. [[Blog Post](https://www.zdnet.com/google-amp/article/another-one-line-npm-package-breaks-the-javascript-ecosystem/)] [[Forbes' Post-mortem](https://javascript.plainenglish.io/is-promise-post-mortem-cab807f18dcc)]
 
-### Package Ownership
-Causes: Oversight, Contact problems
-Examples:
-* (Aug. 2021) The ownership of the package `bebop` was auto-transferred due to a corrupt contact address of the former owner
-  * Aug. 2021: (Package Ownership) during the process of getting packages for a project called bebop published in various software repositories, they found that this name was unclaimed except in NPM. (https://hackaday.com/2021/09/08/the-dark-side-of-package-repositories-ownership-drama-and-malware/ )
+__ Potential Solutions __
+* Write more tests / safe-guards [drawback: extra effort]
+* Use Quality-Gates (other people checking usage) [drawback: extra effort]
+* Use Bug bounties [drawback: extra cost]
 
-#### Potential Solutions:
-* Continuous contact confirmation
+### Package Ownership Disputes
+The maintainer of a open-source library is often the owner of a package on a registry and is the only one allowed to change, delete, or publish new versions. The account of the owner in the registry is often linked to an email address and can only be transferred by the registry operators. If the ownership of a package is transferred this can lead to incompatible libraries (with the same name) or malicious code deleting data or stealing information.
+
+Package ownership problems are often caused by hacked password / credentials, an oversight or misunderstanding by the registry operator, or general contact problems.
+
+Example:
+* (Aug. 2021) During the process of getting packages for a project called `bebop` published in various software repositories, Andrew Sampson found that it was unclaimed except in NPM. After inquiring the NPM registry the ownership of the package `bebop` was auto-transferred to Andrew due to a corrupt contact address of the former owner Zach Kelling. [[Blog Post](https://www.theregister.com/2021/08/10/github_npm_package/)]
+
+__ Potential Solutions __
+* Stronger authentification (e.g., 2FA) [drawback: extra effort]
+* Continuous contact confirmation [drawback: extra effort]
+* Always using scopes / usernames [depends on registry]
 
 ### Corporate Disputes
 Causes: Business decisions
@@ -91,7 +94,7 @@ Examples:
 * (Aug. 2021): Elasticsearch change its widely used JS client library `elasticsearch` to not work with AWS Elasticsearch and OpenSearch anymore.
   * https://github.com/elastic/elasticsearch-js/issues/1519
 
-#### Potential Solutions:
+__ Potential Solutions __
 * ???
 
 ### Security Problems
@@ -113,7 +116,7 @@ from https://en.wikipedia.org/wiki/Npm_(software)#Notable_breakages
 
 
 
-#### Potential Solutions:
+__ Potential Solutions __
 * More tests
 * Hack bounties
 
@@ -127,7 +130,7 @@ Examples:
 * (Jan. 2022): Marak Squiress intentionally introduced changes to break the functionality and later deletes his projects `colors.js` and `faker.js` after getting pushed / bullied by corporates. [Original Message](http://web.archive.org/web/20210704022108/https://github.com/Marak/faker.js/issues/1046) [Full Story](https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/)
   * https://hacker-news.news/post/27252066
 
-#### Potential Solutions:
+__ Potential Solutions __
 * Better monetization mechanisms
 
 ## Examples for working Monetization
@@ -141,7 +144,7 @@ Examples:
 * NPM project reconstruction 
 ... problematic as copyright, brand, and name (handle) is owned by the author/maintainer and assuming the identity of the author is borderline illegal (at least the companies are liable and take warranty that the offered (old) versions are correct)
 
-## OSS Funding related Links
+## General Links
 * [Open source developers, who work for free, are discovering they have power (Jan. 2022)](https://techcrunch.com/2022/01/18/open-source-developers-who-work-for-free-are-discovering-they-have-power/)
 * [Open source has a funding problem (Jan. 2021)](https://stackoverflow.blog/2021/01/07/open-source-has-a-funding-problem/)
 * [Notable breakages of NPM](https://en.wikipedia.org/wiki/Npm_(software)#Notable_breakages)
