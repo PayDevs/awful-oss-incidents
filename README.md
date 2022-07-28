@@ -55,7 +55,7 @@ A part of an open-source project can sometime cause problems when the name of th
 
 Trademark infringements are often caused by an oversight or ignorance from the open-source maintainer as well as the trademark owner or by "Trademark Trolls" registering the trademark to harm the project.
 
-Example:
+__Examples__
 * (March 2016): Azer Koçulu unpublished over 250 modules (esp. `left-pad`) from npm due to trademark infringement over the name "kik" - breaking tens of thousands of projects that depended on it. [[Blog Post](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/)] [[Azer's version](https://web.archive.org/web/20160330050734/https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c)] [[kik's version](https://medium.com/@mproberts/a-discussion-about-the-breaking-of-the-internet-3d4d2a83aa4d#.ld8o5zqz7)]
 
 __Potential Solutions__
@@ -67,7 +67,8 @@ All software system can have minor or major bugs that prevent their intended use
 
 Faulty updates are causes by programming mistakes, integration problems, corrupt dependencies, and in general due to no having enough time for testing.
 
-Example:
+
+__Examples__
 * (April 2020) Forbes Lindesay released version 2.2.0 of the `is-promised` library that didn't adhere to the proper ES module standards causing wide-spread build errors. This release led to bugs in popular build tools used to create new projects, such as Facebook's create-react-app, Google's firebase-tools, Amazon's AWS Serverless CLI, Nuxt.js, AVA, angular-cli, and others. [[Blog Post](https://www.zdnet.com/google-amp/article/another-one-line-npm-package-breaks-the-javascript-ecosystem/)] [[Forbes' Post-mortem](https://javascript.plainenglish.io/is-promise-post-mortem-cab807f18dcc)]
 
 __Potential Solutions__
@@ -80,7 +81,8 @@ The maintainer of a open-source library is often the owner of a package on a reg
 
 Package ownership problems are often caused by hacked password / credentials, an oversight or misunderstanding by the registry operator, or general contact problems.
 
-Example:
+
+__Examples__
 * (Aug. 2021) During the process of getting packages for a project called `bebop` published in various software repositories, Andrew Sampson found that it was unclaimed except in NPM. After inquiring the NPM registry the ownership of the package `bebop` was auto-transferred to Andrew due to a corrupt contact address of the former owner Zach Kelling. [[Blog Post](https://www.theregister.com/2021/08/10/github_npm_package/)]
 
 __Potential Solutions__
@@ -90,7 +92,8 @@ __Potential Solutions__
 
 ### Corporate Disputes
 Causes: Business decisions
-Examples:
+
+__Examples__
 * (Aug. 2021): Elasticsearch change its widely used JS client library `elasticsearch` to not work with AWS Elasticsearch and OpenSearch anymore.
   * https://github.com/elastic/elasticsearch-js/issues/1519
 
@@ -99,7 +102,8 @@ __Potential Solutions__
 
 ### Security Problems
 Causes: Oversight, No time for tests, Corrupt Dependencies, Hacks
-Examples:
+
+__Examples__
 * (Apr 2014): A programming mistake by a single maintainer of `openSSL` led to a vulnerability (l.k.a. **Heartbleed**) that allowed stealing information and passwords from users.
   * OpenSSL, received just $2,000 per year in donations which grew to $9,000 after the issue was found. (The global cost for the software industry was [estimated to be as high as $500 million](https://www.eweek.com/security/heartbleed-ssl-flaw-s-true-cost-will-take-time-to-tally/))
   * [The Heartbleed Vulnerability](https://heartbleed.com/)
@@ -126,7 +130,8 @@ https://www.vice.com/en/article/dypeek/open-source-sabotage-node-ipc-wipe-russia
 ### Developer Burnout
 Developer Burnout / Infocide / Disgruntled Developers
 Causes: Pressure from Users, Disillusionment, Private problems
-Examples:
+
+__Examples__
 * (Jan. 2022): Marak Squiress intentionally introduced changes to break the functionality and later deletes his projects `colors.js` and `faker.js` after getting pushed / bullied by corporates. [Original Message](http://web.archive.org/web/20210704022108/https://github.com/Marak/faker.js/issues/1046) [Full Story](https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/)
   * https://hacker-news.news/post/27252066
 
