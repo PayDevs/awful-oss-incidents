@@ -11,18 +11,19 @@ A categorized list of incidents caused by unappreciated OSS maintainers or under
 The Goal of this classification and list of incidents is to identify and analyze reasons why some OSS maintainers do intentionally cause problems for the larger software ecosystem and to determine potential solutions.
 
 __Table of Contents__
-- [Context](#context)
-- [Incident Categories](#incident-categories)
-  - [Trademark infringements](#trademark--brand-infringements)
-  - [Faulty updates](#faulty-updates)
-  - [Package Ownership](#package-ownership)
-  - [Corporate Disputes](#corporate-disputes)
-  - [Security Problems](#security-problems)
-  - [Cyber-Warfare](#cyber-warfare)
-  - [Developer Burnout](#developer-burnout--infocide--disgruntled-developers)
-- [Examples for working Monetization](#examples-for-working-monetization)
-- [Misc / Aftertoughts](#misc--aftertoughts)
-- [OSS Funding related Links](#oss-funding-related-links)
+- [Awful OSS Incidents](#awful-oss-incidents)
+  - [Context](#context)
+  - [Incident Categories](#incident-categories)
+    - [Trademark infringements](#trademark-infringements)
+    - [Programming mistake](#programming-mistake)
+    - [Package Ownership Disputes](#package-ownership-disputes)
+    - [Usage Disputes](#usage-disputes)
+    - [Security Problems / Hacked Accounts / Criminal Intentions](#security-problems--hacked-accounts--criminal-intentions)
+    - [Cyber-Warfare / Protestware](#cyber-warfare--protestware)
+    - [Developer Burnout](#developer-burnout)
+  - [Examples for working Monetization](#examples-for-working-monetization)
+  - [Misc / Aftertoughts](#misc--aftertoughts)
+  - [General Links](#general-links)
 
 ## Context
 
@@ -32,7 +33,7 @@ But if a project gets more attention and users the heat increases. More and more
 
 ![xkcd comic](https://imgs.xkcd.com/comics/dependency.png)
 
-This ever increasing workload and lack of funding often causes maintainers to get unhappy and sometimes even leave their project or run amok and cause problems for the user base. With more funding most of the identified problems could be mitigated. Funding enables maintainers of open-source projects to:
+This ever increasing workload and lack of funding often causes maintainers to get unhappy and sometimes even leave their project or even "run amok" and cause problems for the user base. With more funding most of the identified problems can be mitigated. Funding enables maintainers of open-source projects to:
 * **pay themselves** a (part-time or full-time) salary to have more time to develop new features, fix bugs, and better maintain the software
 * **pay contributors** to develop new features & fix bugs (e.g., via bug bounties), hire a logo designer, hire a website designer, etc.
 * **improve their project** by registering trademark(s), buy a domain, pay for hosting, ...
@@ -45,10 +46,11 @@ This ever increasing workload and lack of funding often causes maintainers to ge
 ---
 
 ## Incident Categories
-... many incidents happened over time
-... we classified them based on the core problem.
+Many incidents occurred since the advent of the registries and became famous especially in frontend web development, which has a large developer base.
 
-> Please Note that we do not take sides and every side has it's own story. We just try to categorize and describe the problems, history, and consequences based on some articles.
+We classified these incidents based on the core problem, describe them briefly, and state potential solutions to prevent them from happening again.
+
+> Please note that when descibing these incidents, we try to not take sides as every side has it's own story. We just try to categorize and describe the problems, history, and consequences based on available articles.
 
 
 
@@ -62,7 +64,7 @@ __Examples__
 
 __Potential Solutions__
 * Register trademark for the open-source project [drawback: extra cost]
-* Research trademarks periodically [drawback: extra work]
+* Research trademarks periodically and rename OSS project[drawback: extra work & loss of own brand]
 
 
 
@@ -72,16 +74,15 @@ All software system can have minor or major bugs that prevent their intended use
 Programming mistakes are causes by oversights, missing tests, integration problems, corrupt dependencies, and in general due to no having enough time for checking the system in production-like environments.
 
 __Examples__
-* (Apr 2014): A programming mistake by a single maintainer of `openSSL` led to a vulnerability (a.k.a. **Heartbleed**) that allowed stealing information and passwords from users.
-  * OpenSSL, received just $2,000 per year in donations which grew to $9,000 after the issue was found. (The global cost for the software industry was [estimated to be as high as $500 million](https://www.eweek.com/security/heartbleed-ssl-flaw-s-true-cost-will-take-time-to-tally/))
-  * [The Heartbleed Vulnerability](https://heartbleed.com/)
+* (Apr 2014): A programming mistake by a single maintainer of `openSSL` led to a vulnerability (a.k.a. **Heartbleed**) that allowed stealing information and passwords from users. [The Heartbleed Vulnerability Website](https://heartbleed.com/)
+  * OpenSSL, received just $2,000 per year in donations which grew to $9,000 per year after the issue was found. (The global cost for the software industry was [estimated to be as high as $500 million](https://www.eweek.com/security/heartbleed-ssl-flaw-s-true-cost-will-take-time-to-tally/))
 * (April 2020) Forbes Lindesay released version 2.2.0 of the `is-promised` library that didn't adhere to the proper ES module standards causing wide-spread build errors. This release led to bugs in popular build tools used to create new projects, such as Facebook's create-react-app, Google's firebase-tools, Amazon's AWS Serverless CLI, Nuxt.js, AVA, angular-cli, and others. [[Blog Post](https://www.zdnet.com/google-amp/article/another-one-line-npm-package-breaks-the-javascript-ecosystem/)] [[Forbes' Post-mortem](https://javascript.plainenglish.io/is-promise-post-mortem-cab807f18dcc)]
-* (Dec 2021): `log4j` enabled a feature from 2013 by default that allowed loading of malicious code.
-  * [The Log4j Vulnerability](https://www.cisa.gov/uscert/apache-log4j-vulnerability-guidance)
+* (Dec 2021): `log4j` enabled a feature from 2013 by default that allowed loading of malicious code on any log server. [[The Log4j Vulnerability](https://www.cisa.gov/uscert/apache-log4j-vulnerability-guidance)]
+  * The exploitation of this vulnerability did cost ONE company already $ 700 million [[Equifax exposed user data](https://www.ftc.gov/policy/advocacy-research/tech-at-ftc/2022/01/ftc-warns-companies-remediate-log4j-security-vulnerability)]
 
 __Potential Solutions__
 * Write more tests / safe-guards [drawback: extra effort]
-* Use Quality-Gates (other people checking usage) [drawback: extra effort]
+* Use Quality-Gates (other people check OSS) [drawback: extra effort]
 * Use Bug bounties [drawback: extra cost]
 
 
@@ -97,7 +98,7 @@ __Examples__
 __Potential Solutions__
 * Stronger authentification (e.g., 2FA) [drawback: extra effort]
 * Continuous contact confirmation [drawback: extra effort]
-* Always using scopes / usernames [depends on registry]
+* Always use scopes / usernames [depends on registry]
 
 
 
@@ -110,20 +111,20 @@ __Examples__
 * (Aug. 2021): Elasticsearch introduced a breaking change to its widely used JS client library `elasticsearch-js` to not work with AWS Elasticsearch and OpenSearch anymore. [[Github Issue](https://github.com/elastic/elasticsearch-js/issues/1519)]
 
 __Potential Solutions__
-* Not being dependent on a Company's library? [drawback: extra effort]
+* Not being dependent on OSS that has a Company behind it? [drawback: extra effort]
 
 
 
 ### Security Problems / Hacked Accounts / Criminal Intentions
+Most software system have flaws that can be hacked, used to extract data, or otherwise exploited by criminals. While their existance does not necessarily break the system it is prone to be exploited.
 
-Causes: Oversight, No time for tests, Corrupt Dependencies, Hacks
+Security problems are often caused by oversight, no time for tests, corrupt dependencies, or intended hacks.
 
 __Examples__
-* In September 2018, a small package called `event-stream` was infected with malicious code that targeted a specific company and could steal passwords for crypto accounts [NPM Incident Report](https://blog.npmjs.org/post/180565383195/details-about-the-event-stream-incident)
-  * In November 2018, it was discovered that a malicious package had been added as a dependency to version 3.3.6 of the popular package event-stream. The malicious package, called flatmap-stream, contained an encrypted payload that stole bitcoins from certain applications. npm administrators removed the offending package.[16][17]
-* (Oct. 2021): The NPM account for the `UA-Parser-JS` library was hacked, to infect dependent systems with cryptominers and password-stealing trojans in a supply-chain attack. [Full Story](https://www.bleepingcomputer.com/news/security/popular-npm-library-hijacked-to-install-password-stealers-miners/)
-* (Apr 2022): A flaw in the NPM registry allowed adding maintainers to own projects (a.k.a. "Package Planting") - giving a false sense of credibility / security of potentially harmful packages. [Full Story](https://www.bleepingcomputer.com/news/security/npm-flaw-let-attackers-add-anyone-as-maintainer-to-malicious-packages/)
-* In July 2018, the npm credentials of a maintainer of the popular `eslint-scope` package were compromised resulting in a malicious release of eslint-scope, version 3.7.2. The malicious code copied the npm credentials of the machine running eslint-scope and uploaded them to the attacker.[15] 
+* (Nov. 2018) A malicious package was added as a dependency to version 3.3.6 of the popular package `event-stream` by a new maintainer. The malicious package, called `flatmap-stream`, contained an encrypted payload that stole bitcoins from certain applications. [[NPM Incident Report](https://blog.npmjs.org/post/180565383195/details-about-the-event-stream-incident)]
+* (Oct. 2021): The NPM account for the `UA-Parser-JS` library was hijacked, to infect dependent systems with cryptominers and password-stealing trojans in a supply-chain attack. [[Full Story](https://www.bleepingcomputer.com/news/security/popular-npm-library-hijacked-to-install-password-stealers-miners/)]
+* (Apr 2022): A flaw in the NPM registry allowed adding random maintainers to own projects (a.k.a. "Package Planting") - giving a false sense of credibility / security of potentially harmful packages. [[Full Story](https://www.bleepingcomputer.com/news/security/npm-flaw-let-attackers-add-anyone-as-maintainer-to-malicious-packages/)]
+* (Jul 2018) The credentials of a maintainer on NPM were compromised resulting in a malicious release of `eslint-scope`, version 3.7.2. The malicious code copied the npm credentials of the machine running eslint-scope and uploaded them to the attacker. [[Post-mortem](https://eslint.org/blog/2018/07/postmortem-for-malicious-package-publishes/)]
 
 __Potential Solutions__
 * Write more tests / safe-guards [drawback: extra effort]
@@ -133,11 +134,13 @@ __Potential Solutions__
 
 
 
-### Cyber-Warfare
+### Cyber-Warfare / Protestware
+The usage of an open-source project can cause problems when both parties (i.e., the maintainer and user) are in a legal dispute or even war.
+
+Cyber-warfare are causes by deliberate actions of the maintainer to harm or encumber the activities of a group of users.
 
 __Examples__
-* In March 2022, developer Brandon Nozaki Miller released a version of the package node-ipc containing malicious code that would delete files from users with Belarusian and Russian IP addresses, in protest of the Russian invasion of Ukraine. Vue.js, which uses node-ipc as a dependency, did not pin its dependencies to a safe version, meaning that some users of Vue.js became affected by the malicious package if the dependency was fetched as the latest package.[20][21] The affected dependency was also briefly present in version 3.1 of Unity Hub; a hotfix was released the same day to remove the issue, however.[22]
-https://www.vice.com/en/article/dypeek/open-source-sabotage-node-ipc-wipe-russia-belraus-computers
+* (Mar 2022) Maintainer Brandon Nozaki Miller released a version of the package `node-ipc` containing malicious code that would delete files from Belarusian and Russian users. This concerned even frameworks such as Vue.js, which uses node-ipc as a dependency. [[Full story](https://www.bleepingcomputer.com/news/security/big-sabotage-famous-npm-package-deletes-files-to-protest-ukraine-war/)]
 
 __Potential Solutions__
 * ???
@@ -145,12 +148,12 @@ __Potential Solutions__
 
 
 ### Developer Burnout
-Developer Burnout / Infocide / Disgruntled Developers
-Causes: Pressure from Users, Disillusionment, Private problems
+The unpaid nature of open-source projects in connection with increasing pressure from users for bugfixes or new feature sometimes brings maintainers at the edge of exhaustion. Mild versions of burnout can bring a maintainer just to abandon their projects while fully disgruntled maintainers might commit infocide (deleting all code and data) or introduce malicious code that causes harm to user's system.
+
+Developer Burnout is causes by pressure from users, failure to monetize, disillusionment, sometimes in addition to private problems.
 
 __Examples__
-* (Jan. 2022): Marak Squiress intentionally introduced changes to break the functionality and later deletes his projects `colors.js` and `faker.js` after getting pushed / bullied by corporates. [Original Message](http://web.archive.org/web/20210704022108/https://github.com/Marak/faker.js/issues/1046) [Full Story](https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/)
-  * https://hacker-news.news/post/27252066
+* (Jan. 2022): Marak Squiress intentionally introduced changes to break the functionality and later deletes his projects `colors.js` and `faker.js` after failing to monetize it and getting pushed to hard by corporates. [[Original Message](https://hacker-news.news/post/27252066)] [[Github issue](http://web.archive.org/web/20210704022108/https://github.com/Marak/faker.js/issues/1046)] [[Full Story](https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/)]
 
 __Potential Solutions__
 * Better monetization mechanisms
@@ -158,22 +161,25 @@ __Potential Solutions__
 
 
 ## Examples for working Monetization
-* cURL? [Daniel Stenberg](https://daniel.haxx.se/) 
-  * Story: https://onezero.medium.com/the-internet-relies-on-people-working-for-free-a79104a68bcc
+* `cURL`, which is maintained by [Daniel Stenberg](https://daniel.haxx.se/) seems to have a working monetization approach [[Story](https://onezero.medium.com/the-internet-relies-on-people-working-for-free-a79104a68bcc)]
 
 
 
 ## Misc / Aftertoughts
-* maintainer account takeovers [`ua-parser-js`](https://github.com/advisories/GHSA-pjwm-rvh2-c87w)
+<!-- 
+* other maintainer account takeovers [`ua-parser-js`](https://github.com/advisories/GHSA-pjwm-rvh2-c87w) 
+-->
 
-* GitHubs site-policy [2022](https://github.com/github/site-policy/issues/513) 
-* NPM project reconstruction 
-... problematic as copyright, brand, and name (handle) is owned by the author/maintainer and assuming the identity of the author is borderline illegal (at least the companies are liable and take warranty that the offered (old) versions are correct)
+* GitHubs site-policy change after the Faker.js incident [2022](https://github.com/github/site-policy/issues/513) 
+<!-- 
+* NPM project reconstruction: 
+... might be problematic as copyright, brand, and name (handle) is owned by the author/maintainer and assuming the identity of the author is borderline illegal (at least the companies are liable and take warranty that the offered (old) versions are correct)
+-->
 
 
 
 ## General Links
 * [Open source developers, who work for free, are discovering they have power (Jan. 2022)](https://techcrunch.com/2022/01/18/open-source-developers-who-work-for-free-are-discovering-they-have-power/)
 * [Open source has a funding problem (Jan. 2021)](https://stackoverflow.blog/2021/01/07/open-source-has-a-funding-problem/)
-* [Notable breakages of NPM](https://en.wikipedia.org/wiki/Npm_(software)#Notable_breakages)
+* [Wikipedia: Notable breakages of NPM](https://en.wikipedia.org/wiki/Npm_(software)#Notable_breakages)
 * [The Internet Relies on People Working for Free (Sep. 2019)](https://onezero.medium.com/the-internet-relies-on-people-working-for-free-a79104a68bcc)
