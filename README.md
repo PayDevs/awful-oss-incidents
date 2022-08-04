@@ -5,6 +5,8 @@
 [![GitHub](https://img.shields.io/github/followers/paydevs?label=Follow&affiliations=OWNER%2CCOLLABORATOR%2CORGANIZATION_MEMBER&style=social)](https://github.com/paydevs)
 [![Reddit](https://img.shields.io/reddit/user-karma/combined/paydevs?label=Karma&style=social)](https://www.reddit.com/user/paydevs)
 
+> NOTE: This list and classification is still not complete and should be seen as work in progress!
+
 # Awful OSS Incidents
 A categorized list of incidents caused by unappreciated OSS maintainers or underfunded OSS library projects. Feedback welcome!
 
