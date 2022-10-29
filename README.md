@@ -143,6 +143,7 @@ Cyber-warfare are causes by deliberate actions of the maintainer to harm or encu
 
 __Examples__
 * (Mar 2022) Maintainer Brandon Nozaki Miller released a version of the package `node-ipc` containing malicious code that would delete files from Belarusian and Russian users. This concerned even frameworks such as Vue.js, which uses node-ipc as a dependency. [[Full story](https://www.bleepingcomputer.com/news/security/big-sabotage-famous-npm-package-deletes-files-to-protest-ukraine-war/)]
+* (Apr 2022) Maintainer "limonte" released a minor version update of the highly popular package `sweetalert2` containing malicious code that would activate for people with the Russian language activated in their browser, visiting Russian sites. The code essentially defaces the website viewed with anti-war messages. [[Pull Request](https://github.com/sweetalert2/sweetalert2/pull/2428)]
 
 __Potential Solutions__
 * ???
