@@ -31,6 +31,7 @@ In the beginning developing OSS is often great for the maintainer - there are no
 But if a project gets more attention and users the heat increases. More and more users want new features, bug-fixes, more docu and tutorials, etc. Companies using the project want fixes to problems asap (e.g., for [cURL](https://onezero.medium.com/the-internet-relies-on-people-working-for-free-a79104a68bcc)) - esp. if it concerns their own SLAs - all without previously funding or currently supporting the project. And most of Companies systems and the Internet's infrastructure at large are using open-source libraries developed by few maintainers and without funding - wonderfully visualized in a xkcd comic.
 
 ![xkcd comic](https://imgs.xkcd.com/comics/dependency.png)
+[© xkcd comics](https://xkcd.com/license.html)
 
 This ever increasing workload and lack of funding often causes maintainers to get unhappy and sometimes even leave their project or run amok and cause problems for the user base. With more funding most of the identified problems could be mitigated. Funding enables maintainers of open-source projects to:
 * **pay themselves** a (part-time or full-time) salary to have more time to develop new features, fix bugs, and better maintain the software
