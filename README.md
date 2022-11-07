@@ -29,7 +29,7 @@ __Table of Contents__
 
 ## Context
 
-In the beginning developing OSS is often great for the maintainer - there are no constraints on the tech or features, only few bugs exists, the maintainer can work as and when he wants, there are only his own expectations to fulfill, and the few users appreciate the project. Furthermore, working on the open-source project helps them to sharpen their skills, build a reputation for themselves, gain perspectives on the topic from the community, or simply help the industry by making innovations available at no cost.
+In the beginning developing OSS is often great for the maintainer - there are no constraints on the tech or features, only few bugs exists, the maintainer can work as and when they want, there are only their own expectations to fulfill, and the few users appreciate the project. Furthermore, working on the open-source project helps them to sharpen their skills, build a reputation for themselves, gain perspectives on the topic from the community, or simply help the industry by making innovations available at no cost.
 
 But if a project gets more attention and users the heat increases. More and more users want new features, bug-fixes, more docu and tutorials, etc. Companies using the project want fixes to problems asap (e.g., for [cURL](https://onezero.medium.com/the-internet-relies-on-people-working-for-free-a79104a68bcc)) - esp. if it concerns their own SLAs - all without previously funding or currently supporting the project. And most of Companies systems and the Internet's infrastructure at large are using open-source libraries developed by few maintainers and without funding - wonderfully visualized in a xkcd comic.
 
