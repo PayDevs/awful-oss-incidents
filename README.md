@@ -63,7 +63,7 @@ A part of an open-source project can sometime cause problems when the name of th
 Trademark infringements are often caused by an oversight or ignorance from the open-source maintainer as well as the trademark owner or by "Trademark Trolls" registering the trademark to harm the project.
 
 __Examples__
-* (March 2016): Azer Koçulu unpublished over 250 modules (esp. `left-pad`) from npm due to trademark infringement over the name "kik" - breaking tens of thousands of projects that depended on it. [[Blog Post](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/)] [[Azer's version](https://web.archive.org/web/20160330050734/https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c)] [[kik's version](https://medium.com/@mproberts/a-discussion-about-the-breaking-of-the-internet-3d4d2a83aa4d#.ld8o5zqz7)]
+* (March 2016): Azer Koçulu unpublished over 250 modules (esp. `left-pad`) from npm due to trademark infringement over the name "kik" - breaking tens of thousands of projects that depended on it. [[Blog Post](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/)] [[Azer's version](https://web.archive.org/web/20160330050734/https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c)] [[kik's version](https://web.archive.org/web/20220321202250/https://medium.com/@mproberts/a-discussion-about-the-breaking-of-the-internet-3d4d2a83aa4d)]
 
 __Potential Solutions__
 * Register trademark for the open-source project [drawback: extra cost]
