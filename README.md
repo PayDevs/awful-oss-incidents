@@ -157,7 +157,7 @@ The unpaid nature of open-source projects in connection with increasing pressure
 Developer Burnout is causes by pressure from users, failure to monetize, disillusionment, sometimes in addition to private problems.
 
 __Examples__
-* (Jan. 2022): Marak Squiress intentionally introduced changes to break the functionality and later deletes his projects `colors.js` and `faker.js` after failing to monetize it and getting pushed to hard by corporates. [[Original Message](https://hacker-news.news/post/27252066)] [[Github issue](http://web.archive.org/web/20210704022108/https://github.com/Marak/faker.js/issues/1046)] [[Full Story](https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/)]
+* (Jan. 2022): Marak Squiress intentionally introduced changes to break the functionality and later deletes his projects `colors.js` and `faker.js` after failing to monetize it and getting pushed too hard by corporates. [[Original Message](https://hacker-news.news/post/27252066)] [[Github issue](http://web.archive.org/web/20210704022108/https://github.com/Marak/faker.js/issues/1046)] [[Full Story](https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/)]
 
 __Potential Solutions__
 * Better monetization mechanisms
