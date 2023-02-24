@@ -53,7 +53,7 @@ Many incidents occurred since the advent of the registries and became famous esp
 
 We classified these incidents based on the core problem, describe them briefly, and state potential solutions to prevent them from happening again.
 
-> Please note that when descibing these incidents, we try to not take sides as every side has it's own story. We just try to categorize and describe the problems, history, and consequences based on available articles.
+> Please note that when descibing these incidents, we try to not take sides as every side has its own story. We just try to categorize and describe the problems, history, and consequences based on available articles.
 
 
 
@@ -72,9 +72,9 @@ __Potential Solutions__
 
 
 ### Programming mistake
-All software system can have minor or major bugs that prevent their intended use in different scenarios. When a open-source maintainer publishes a faulty project the effect can be felt by many of its users.
+All software system can have minor or major bugs that prevent their intended use in different scenarios. When a open-source maintainer publishes a faulty project, the effect can be felt by many of its users.
 
-Programming mistakes are causes by oversights, missing tests, integration problems, corrupt dependencies, and in general due to no having enough time for checking the system in production-like environments.
+Programming mistakes are causes by oversights, missing tests, integration problems, corrupt dependencies, and in general due to not having enough time to test the system in production-like environments.
 
 __Examples__
 * (Apr 2014): A programming mistake by a single maintainer of `openSSL` led to a vulnerability (a.k.a. **Heartbleed**) that allowed stealing information and passwords from users. [The Heartbleed Vulnerability Website](https://heartbleed.com/)
@@ -91,12 +91,12 @@ __Potential Solutions__
 
 
 ### Package Ownership Disputes
-The maintainer of a open-source library is often the owner of a package on a registry and is the only one allowed to change, delete, or publish new versions. The account of the owner in the registry is often linked to an email address and can only be transferred by the registry operators. If the ownership of a package is transferred this can lead to incompatible libraries (with the same name) or malicious code deleting data or stealing information.
+The maintainer of a open-source library is often the owner of a package on a registry and is the only one allowed to change, delete, or publish new versions. The account of the owner in the registry is often linked to an email address and can only be transferred by the registry operators. If the ownership of a package is transferred, this can lead to incompatible libraries (with the same name) or malicious code deleting data or stealing information.
 
 Package ownership problems are often caused by hacked password / credentials, an oversight or misunderstanding by the registry operator, or general contact problems.
 
 __Examples__
-* (Aug. 2021) During the process of getting packages for a project called `bebop` published in various software repositories, Andrew Sampson found that it was unclaimed except in NPM. After inquiring the NPM registry the ownership of the package `bebop` was auto-transferred to Andrew due to a corrupt contact address of the former owner Zach Kelling. [[Blog Post](https://www.theregister.com/2021/08/10/github_npm_package/)]
+* (Aug. 2021) During the process of getting packages for a project called `bebop` published in various software repositories, Andrew Sampson found that it was unclaimed except in npm. After inquiring to the npm registry, the ownership of the package `bebop` was auto-transferred to Andrew due to a corrupt contact address of the former owner Zach Kelling. [[Blog Post](https://www.theregister.com/2021/08/10/github_npm_package/)]
 
 __Potential Solutions__
 * Stronger authentification (e.g., 2FA) [drawback: extra effort]
@@ -106,9 +106,9 @@ __Potential Solutions__
 
 
 ### Usage Disputes
-The usage of an open-source project can sometime cause problems when third-parties (e.g. Cloud provider) offer them commercially and/or the maintainer community wants to commercialize and builds a Startup.
+The usage of an open-source project can sometimes cause problems when third-parties (e.g. Cloud provider) offer them commercially and/or the maintainer community wants to commercialize and builds a Startup.
 
-Usage disputes are causes by different point of views how an open-source project should be used or commercialized. Even if the positions are legally clear the dispute can affect and impair the users.
+Usage disputes are caused by different points of views on how an open-source project should be used or commercialized. Even if the positions are legally clear, the dispute can affect and impair the users.
 
 __Examples__
 * (Aug. 2021): Elasticsearch introduced a breaking change to its widely used JS client library `elasticsearch-js` to not work with AWS Elasticsearch and OpenSearch anymore. [[Github Issue](https://github.com/elastic/elasticsearch-js/issues/1519)]
@@ -119,7 +119,7 @@ __Potential Solutions__
 
 
 ### Security Problems / Hacked Accounts / Criminal Intentions
-Most software system have flaws that can be hacked, used to extract data, or otherwise exploited by criminals. While their existance does not necessarily break the system it is prone to be exploited.
+Most software systems have flaws that can be hacked, used to extract data, or otherwise exploited by criminals. While their existance does not necessarily break the system, it is prone to be exploited.
 
 Security problems are often caused by oversight, no time for tests, corrupt dependencies, or intended hacks.
 
@@ -152,7 +152,7 @@ __Potential Solutions__
 
 
 ### Developer Burnout
-The unpaid nature of open-source projects in connection with increasing pressure from users for bugfixes or new feature sometimes brings maintainers at the edge of exhaustion. Mild versions of burnout can bring a maintainer just to abandon their projects while fully disgruntled maintainers might commit infocide (deleting all code and data) or introduce malicious code that causes harm to user's system.
+The unpaid nature of open-source projects, in connection with increasing pressure from users for bugfixes or new feature sometimes brings maintainers to the edge of exhaustion. Mild versions of burnout can cause a maintainer just to abandon their projects while fully disgruntled maintainers might commit infocide (deleting all code and data) or introduce malicious code that causes harm to user's system.
 
 Developer Burnout is causes by pressure from users, failure to monetize, disillusionment, sometimes in addition to private problems.
 
