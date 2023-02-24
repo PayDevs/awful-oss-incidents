@@ -158,6 +158,7 @@ Developer Burnout is causes by pressure from users, failure to monetize, disillu
 
 __Examples__
 * (Jan. 2022): Marak Squiress intentionally introduced changes to break the functionality and later deletes his projects `colors.js` and `faker.js` after failing to monetize it and getting pushed too hard by corporates. [[Original Message](https://hacker-news.news/post/27252066)] [[Github issue](http://web.archive.org/web/20210704022108/https://github.com/Marak/faker.js/issues/1046)] [[Full Story](https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/)]
+* (Feb. 2023): Denis Pushkarev (aka 'zloirock') reduces / reshapes his work on his projects `core-js` after failing to monetize it and getting pushed too hard by parts of the community. [[Original Message (very long)](https://github.com/zloirock/core-js/blob/master/docs/2023-02-14-so-whats-next.md)] [[Github issue](https://github.com/zloirock/core-js/issues/1179)] [[Short Story](https://vived.io/fascinating-story-of-core-js-frontend-weekly-vol-125/)]
 
 __Potential Solutions__
 * Better monetization mechanisms
