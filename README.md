@@ -63,7 +63,7 @@ A part of an open-source project can sometime cause problems when the name of th
 Trademark infringements are often caused by an oversight or ignorance from the open-source maintainer as well as the trademark owner or by "Trademark Trolls" registering the trademark to harm the project.
 
 __Examples__
-* (March 2016): Azer Koçulu unpublished over 250 modules (esp. `left-pad`) from npm due to trademark infringement over the name "kik" - breaking tens of thousands of projects that depended on it. [[Blog Post](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/)] [[Azer's version](https://web.archive.org/web/20160330050734/https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c)] [[kik's version](https://web.archive.org/web/20220321202250/https://medium.com/@mproberts/a-discussion-about-the-breaking-of-the-internet-3d4d2a83aa4d)]
+* (March 2016): Azer Koçulu unpublished over 250 modules (esp. `left-pad`) from NPM due to trademark infringement over the name "kik" - breaking tens of thousands of projects that depended on it. [[Blog Post](https://www.theregister.com/2016/03/23/npm_left_pad_chaos/)] [[Azer's version](https://web.archive.org/web/20160330050734/https://medium.com/@azerbike/i-ve-just-liberated-my-modules-9045c06be67c)] [[kik's version](https://web.archive.org/web/20220321202250/https://medium.com/@mproberts/a-discussion-about-the-breaking-of-the-internet-3d4d2a83aa4d)]
 
 __Potential Solutions__
 * Register trademark for the open-source project [drawback: extra cost]
@@ -96,7 +96,7 @@ The maintainer of a open-source library is often the owner of a package on a reg
 Package ownership problems are often caused by hacked password / credentials, an oversight or misunderstanding by the registry operator, or general contact problems.
 
 __Examples__
-* (Aug. 2021) During the process of getting packages for a project called `bebop` published in various software repositories, Andrew Sampson found that it was unclaimed except in npm. After inquiring to the npm registry, the ownership of the package `bebop` was auto-transferred to Andrew due to a corrupt contact address of the former owner Zach Kelling. [[Blog Post](https://www.theregister.com/2021/08/10/github_npm_package/)]
+* (Aug. 2021) During the process of getting packages for a project called `bebop` published in various software repositories, Andrew Sampson found that it was unclaimed except in npm. After inquiring to the NPM registry, the ownership of the package `bebop` was auto-transferred to Andrew due to a corrupt contact address of the former owner Zach Kelling. [[Blog Post](https://www.theregister.com/2021/08/10/github_npm_package/)]
 
 __Potential Solutions__
 * Stronger authentification (e.g., 2FA) [drawback: extra effort]
@@ -127,7 +127,7 @@ __Examples__
 * (Nov. 2018) A malicious package was added as a dependency to version 3.3.6 of the popular package `event-stream` by a new maintainer. The malicious package, called `flatmap-stream`, contained an encrypted payload that stole bitcoins from certain applications. [[NPM Incident Report](https://blog.npmjs.org/post/180565383195/details-about-the-event-stream-incident)]
 * (Oct. 2021): The NPM account for the `UA-Parser-JS` library was hijacked, to infect dependent systems with cryptominers and password-stealing trojans in a supply-chain attack. [[Full Story](https://www.bleepingcomputer.com/news/security/popular-npm-library-hijacked-to-install-password-stealers-miners/)]
 * (Apr 2022): A flaw in the NPM registry allowed adding random maintainers to own projects (a.k.a. "Package Planting") - giving a false sense of credibility / security of potentially harmful packages. [[Full Story](https://www.bleepingcomputer.com/news/security/npm-flaw-let-attackers-add-anyone-as-maintainer-to-malicious-packages/)]
-* (Jul 2018) The credentials of a maintainer on NPM were compromised resulting in a malicious release of `eslint-scope`, version 3.7.2. The malicious code copied the npm credentials of the machine running eslint-scope and uploaded them to the attacker. [[Post-mortem](https://eslint.org/blog/2018/07/postmortem-for-malicious-package-publishes/)]
+* (Jul 2018) The credentials of a maintainer on NPM were compromised resulting in a malicious release of `eslint-scope`, version 3.7.2. The malicious code copied the NPM credentials of the machine running eslint-scope and uploaded them to the attacker. [[Post-mortem](https://eslint.org/blog/2018/07/postmortem-for-malicious-package-publishes/)]
 
 __Potential Solutions__
 * Write more tests / safe-guards [drawback: extra effort]
