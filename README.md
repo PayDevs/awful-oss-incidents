@@ -81,7 +81,7 @@ __Examples__
   * OpenSSL, received just $2,000 per year in donations which grew to $9,000 per year after the issue was found. (The global cost for the software industry was [estimated to be as high as $500 million](https://www.eweek.com/security/heartbleed-ssl-flaw-s-true-cost-will-take-time-to-tally/))
 * (April 2020) Forbes Lindesay released version 2.2.0 of the `is-promised` library that didn't adhere to the proper ES module standards causing wide-spread build errors. This release led to bugs in popular build tools used to create new projects, such as Facebook's create-react-app, Google's firebase-tools, Amazon's AWS Serverless CLI, Nuxt.js, AVA, angular-cli, and others. [[Blog Post](https://www.zdnet.com/google-amp/article/another-one-line-npm-package-breaks-the-javascript-ecosystem/)] [[Forbes' Post-mortem](https://javascript.plainenglish.io/is-promise-post-mortem-cab807f18dcc)]
 * (Dec 2021): `log4j` enabled a feature from 2013 by default that allowed loading of malicious code on any log server. [[The Log4j Vulnerability](https://www.cisa.gov/uscert/apache-log4j-vulnerability-guidance)]
-  * The exploitation of this vulnerability did cost ONE company already $ 700 million [[Equifax exposed user data](https://www.ftc.gov/policy/advocacy-research/tech-at-ftc/2022/01/ftc-warns-companies-remediate-log4j-security-vulnerability)]
+  <!-- * The exploitation of these kind of vulnerability did cost ONE company already $ 700 million [[Equifax exposed user data](https://www.ftc.gov/policy/advocacy-research/tech-at-ftc/2022/01/ftc-warns-companies-remediate-log4j-security-vulnerability)] -->
 
 __Potential Solutions__
 * Write more tests / safe-guards [drawback: extra effort]
