@@ -188,3 +188,7 @@ __Potential Solutions__
 * [Open source has a funding problem (Jan. 2021)](https://stackoverflow.blog/2021/01/07/open-source-has-a-funding-problem/)
 * [Wikipedia: Notable breakages of NPM](https://en.wikipedia.org/wiki/Npm_(software)#Notable_breakages)
 * [The Internet Relies on People Working for Free (Sep. 2019)](https://onezero.medium.com/the-internet-relies-on-people-working-for-free-a79104a68bcc)
+
+
+---
+*Author: [Jörg Rech](https://joerg-rech.com/) @ [PayDevs.com](https://www.paydevs.com/) et al.*
